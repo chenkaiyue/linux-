@@ -1,0 +1,2 @@
+/etc/fstab	文件系统挂载的相关信息
+/ect/mdadm.conf 磁盘阵列的配置文件
