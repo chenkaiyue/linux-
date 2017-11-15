@@ -68,7 +68,7 @@ mount /dev/cdrom /media/
 
 修改/etc/fstab 重启后依旧生效
 /dev/sdc1  /data1 xfs defaults 0 0
-mount -admin #挂载/etc/fstab中的所有文件系统
+mount -a #挂载/etc/fstab中的所有文件系统
 mount #查看所有的文件系统
 
 
@@ -245,3 +245,19 @@ netstat -an
 netstat -nutlp
 
 
+## 内核模块
+lsmod显示
+
+modprobe ip_vs加载模块
+lsmod | grep ip_vs
+modprobe -r ip_vs 卸载模块
+
+modinfo ip_vs
+
+更改文件使模块安装长期有效
+echo "modprobe ip_vs" >> /ect/rc.d/rc.local
+
+调整内核参数
+直接修改/proc
+echo "1" > /proc/sys/net/ipv4/ip_forward
+永久性调整：修改/etc/sysctl.conf

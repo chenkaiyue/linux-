@@ -1,2 +1,9 @@
 /etc/fstab	文件系统挂载的相关信息
 /ect/mdadm.conf 磁盘阵列的配置文件
+/lib/modules/`uname -r`/ 系统的内核模块
+/ect/rc.d/rc.local 开机导入的模块 	 echo "modprobe ip_vs" >> /ect/rc.d/rc.local
+/etc/sysctl.conf 内核参数
+/etc/shells系统支持的Shell
+.bash_history 保存历史命令
+/etc/profile	中记录了最多记录的命令的条数
+/proc/cpuinfo cpu相关配置信息
